@@ -1,0 +1,12 @@
+{
+    "patterns": [
+        {
+            "regexp": "24cM_x(\\d+)_y(\\d+)\\.tmx",
+            "multiplierX": 960,
+            "multiplierY": 528,
+            "offsetX": 0,
+            "offsetY": 0
+        }
+    ],
+    "type": "world"
+}

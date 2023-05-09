@@ -1,0 +1,6 @@
+say Labcode 002_1, 5/17/82
+say This new system will not only boost the research and progress of the project...
+say But it will also use a permission system based on the amount of "Trinkets"-
+say -that someone has.
+say For instance, someone with 7 or more trinkets can access the admin building.
+say End Log 002_1

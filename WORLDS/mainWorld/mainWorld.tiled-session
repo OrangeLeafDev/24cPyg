@@ -1,0 +1,408 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "automapping.whileDrawing": false,
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "24c Block Tileset (v0.1).tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1.5
+        },
+        "24c Interactables Tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "24c Interactives - MapBlocks.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "24cM_x0_y0.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 613,
+                "y": 1762
+            }
+        },
+        "24cM_x0_y1.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 480,
+                "y": 265
+            }
+        },
+        "24cM_x0_y2.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 480,
+                "y": 265
+            }
+        },
+        "24cM_x0_y3.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 3781,
+                "y": 126
+            }
+        },
+        "24cM_x0_y4.tmx": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 566,
+                "y": 107
+            }
+        },
+        "24cM_x0_y5.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 4,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 480,
+                "y": 263.875
+            }
+        },
+        "24cM_x1_y0.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": -539,
+                "y": 333
+            }
+        },
+        "24cM_x1_y1.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 442,
+                "y": -57
+            }
+        },
+        "24cM_x1_y2.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.5,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 480,
+                "y": 265
+            }
+        },
+        "24cM_x1_y3.tmx": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 335,
+                "y": 659
+            }
+        },
+        "24cM_x1_y4.tmx": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": -177,
+                "y": -35
+            }
+        },
+        "24cM_x1_y5.tmx": {
+            "scale": 1,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 300,
+                "y": -93
+            }
+        },
+        "24cM_x2_y0.tmx": {
+            "scale": 1,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 378.5,
+                "y": 275
+            }
+        },
+        "24cM_x2_y1.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 2570,
+                "y": 2526.6666666666665
+            }
+        },
+        "24cM_x2_y2.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.33,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 481.818181818182,
+                "y": 265.151515151515
+            }
+        },
+        "24cM_x2_y3.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 375.3333333333333,
+                "y": 865.3333333333333
+            }
+        },
+        "24cM_x2_y4.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 283,
+                "y": -1274
+            }
+        },
+        "24cM_x2_y5.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 395,
+                "y": -2574
+            }
+        },
+        "24cM_x3_y0.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": -494,
+                "y": 2097
+            }
+        },
+        "24cM_x3_y1.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 480,
+                "y": 265
+            }
+        },
+        "24cM_x3_y2.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 480,
+                "y": 263.75
+            }
+        },
+        "24cM_x3_y3.tmx": {
+            "scale": 1,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 874.5,
+                "y": 91
+            }
+        },
+        "24cM_x3_y4.tmx": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 1476,
+                "y": 374
+            }
+        },
+        "24cM_x3_y5.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 215,
+                "y": -1700
+            }
+        },
+        "24cM_x4_y0.tmx": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": -386,
+                "y": 446
+            }
+        },
+        "24cM_x4_y1.tmx": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": -386,
+                "y": -82
+            }
+        },
+        "24cM_x4_y2.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.33,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": -1460.6060606060605,
+                "y": 1037.8787878787878
+            }
+        },
+        "24cM_x4_y3.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 92.66666666666669,
+                "y": 129.33333333333331
+            }
+        },
+        "24cM_x4_y4.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 321,
+                "y": 266
+            }
+        },
+        "24cM_x4_y5.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 2,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": -1443.5,
+                "y": -531.25
+            }
+        },
+        ":/automap-tiles.tsx": {
+            "scaleInDock": 2
+        },
+        "G:/My Drive/24c/TiledTest/tes.tmx": {
+            "scale": 0.6610416666666666,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 467.4440592499212,
+                "y": 90.00945477466121
+            }
+        },
+        "G:/My Drive/24c/dist/WORLDS/mainWorld/24c Block Tileset (v0.1).tsx": {
+            "scaleInDock": 1
+        },
+        "G:/My Drive/24c/dist/WORLDS/mainWorld/24c Interactives - MapBlocks.tsx": {
+            "scaleInDock": 1
+        },
+        "G:/My Drive/24c/dist/WORLDS/mainWorld/24cM_x0_y0.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2322,
+                "y": 1028.6666666666665
+            }
+        },
+        "G:/My Drive/24c/dist/WORLDS/mainWorld/24cM_x2_y1.tmx": {
+            "scale": 2,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 456.5,
+                "y": 452.25
+            }
+        },
+        "G:/My Drive/24c/dist/WORLDS/mainWorld/24cM_x2_y2.tmx": {
+            "scale": 2,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 456.5,
+                "y": -7
+            }
+        },
+        "automap-tiles.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 314,
+                "y": 395.33333333333326
+            }
+        },
+        "rules.tmx": {
+            "scale": 3,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 174.33333333333331,
+                "y": 84.66666666666667
+            }
+        },
+        "tilesetRules.tmx": {
+            "scale": 4,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 58,
+                "y": 60.625
+            }
+        }
+    },
+    "last.externalTilesetPath": "G:/My Drive/24c/WORLDS/mainWorld",
+    "last.imagePath": "G:/My Drive/24c",
+    "last.worldFilePath": "G:/My Drive/24c/dist/WORLDS/mainWorld",
+    "loadedWorlds": [
+        "G:/My Drive/24c/WORLDS/mainWorld/mainWorld.world",
+        "G:/My Drive/24c/dist/WORLDS/mainWorld/mainWorld.world"
+    ],
+    "map.fixedSize": false,
+    "map.height": 54,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 54,
+    "openFiles": [
+    ],
+    "project": "mainWorld.tiled-project",
+    "property.type": "string",
+    "recentFiles": [
+        "24cM_x4_y5.tmx",
+        "24cM_x0_y5.tmx",
+        "24cM_x3_y1.tmx",
+        "24cM_x3_y2.tmx",
+        "24cM_x0_y2.tmx",
+        "24cM_x0_y1.tmx",
+        "24cM_x2_y2.tmx",
+        "24cM_x1_y2.tmx",
+        "24cM_x4_y2.tmx",
+        "G:/My Drive/24c/TiledTest/tes.tmx",
+        "24cM_x3_y0.tmx",
+        "24c Block Tileset (v0.1).tsx"
+    ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx"
+}
