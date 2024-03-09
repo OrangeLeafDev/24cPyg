@@ -334,7 +334,7 @@ def tileXCollisionCheck(tileList):
             player.right = tempTile.left
             gv.playerX = tempTile.left - player.width / 2
             ifXHit += 1
-            if gv.playerJump and not gv.hurtFlag and gv.cutsceneInteg <= 0 and gv.playerMoveRight and colTiles[1] != []: #  and gv.playerMoveRight
+            if gv.playerJump and not gv.hurtFlag and gv.cutsceneInteg <= 0 and gv.playerMoveRight and colTiles[0] != []: #  and gv.playerMoveRight
                 musicsys.play(f"{mainDir}/SOUND/FX/jump.wav", musicsys.sfxCh)
                 gv.playerXVel = -4
                 gv.playerYVel = 3.5
@@ -354,7 +354,7 @@ def tileXCollisionCheck(tileList):
             player.left = tempTile.right
             gv.playerX = tempTile.right + player.width / 2
             ifXHit -= 1
-            if gv.playerJump and not gv.hurtFlag and gv.cutsceneInteg <= 0 and gv.playerMoveLeft and colTiles[1] != []: # and gv.playerMoveLeft
+            if gv.playerJump and not gv.hurtFlag and gv.cutsceneInteg <= 0 and gv.playerMoveLeft and colTiles[0] != []: # and gv.playerMoveLeft
                 musicsys.play(f"{mainDir}/SOUND/FX/jump.wav", musicsys.sfxCh)
                 gv.playerXVel = 4
                 gv.playerYVel = 3.5
