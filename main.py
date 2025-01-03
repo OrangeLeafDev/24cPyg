@@ -667,87 +667,87 @@ def main_inputCheck():  # sourcery skip: low-code-quality
     global rec, recEnabled
     for event in pygame.event.get():
         if event.type == pygame.VIDEORESIZE:
-            screenFlush = pygame.display.set_mode((pygame.display.get_surface().get_size()), pygame.RESIZABLE, vsync=1)
+            screenFlush = pygame.display.set_mode((pygame.display.get_surface().get_size()), pygame.RESIZABLE, vsync=1);
         # Did the user hit a key?
         if event.type == KEYDOWN:
             if event.key == K_w:
-                gv.playerJump = True
+                gv.playerJump = True;
                 if gv.playerJumpCounter == 2:
-                    jumpTrigger(math.atan2(gv.playerYVel, gv.playerXVel)*-64+90, 2.75)
+                    jumpTrigger(math.atan2(gv.playerYVel, gv.playerXVel)*-64+90, 2.75);
                 elif gv.playerJumpCounter == 1:
-                    jumpTrigger(math.atan2(gv.playerYVel, gv.playerXVel)*-64+90, -5)
+                    jumpTrigger(math.atan2(gv.playerYVel, gv.playerXVel)*-64+90, -5);
             if event.key == K_d:
-                gv.playerMoveRight = True
+                gv.playerMoveRight = True;
             if event.key == K_a:
-                gv.playerMoveLeft = True
+                gv.playerMoveLeft = True;
             if event.key == K_RETURN:
-                gv.playerEnterKey = True
+                gv.playerEnterKey = True;
             if event.key == K_r:
-                gv.hurtFlag = True
+                gv.hurtFlag = True;
             if event.key == pygame.K_z:
                 if recEnabled:
-                    filesys.writeFile("tutData", str(rec))
-                recEnabled = not recEnabled
+                    filesys.writeFile("tutData", str(rec));
+                recEnabled = not recEnabled;
             if event.key == K_SPACE and gv.diaQueue != []:
-                del gv.diaQueue[0]
-                dialogSound()
+                del gv.diaQueue[0];
+                dialogSound();
                 
         elif event.type == KEYUP:
 
             if event.key == K_w:
-                gv.playerJump = False
+                gv.playerJump = False;
             if event.key == K_d:
-                gv.playerMoveRight = False
+                gv.playerMoveRight = False;
             if event.key == K_a:
-                gv.playerMoveLeft = False
+                gv.playerMoveLeft = False;
             if event.key == K_RETURN:
-                gv.playerEnterKey = False
+                gv.playerEnterKey = False;
 
         elif event.type == QUIT:
-            gv.running = False
+            gv.running = False;
 
 def dialogSound():
     if gv.diaQueue != []:
         if gv.diaQueue[0][1] == "P":
-            musicsys.play(f"{mainDir}/SOUND/FX/char4.wav", musicsys.sfxCh)
+            musicsys.play(f"{mainDir}/SOUND/FX/char4.wav", musicsys.sfxCh);
         elif gv.diaQueue[0][1] == "T":
-            musicsys.play(f"{mainDir}/SOUND/FX/sign1.wav", musicsys.sfxCh)      
+            musicsys.play(f"{mainDir}/SOUND/FX/sign1.wav", musicsys.sfxCh);      
 
 def dialogRender():
     if gv.diaQueue != []:
-        print(gv.cutsceneInteg)
+        print(gv.cutsceneInteg);
         if gv.cutsceneInteg <= 120:
-            gv.cutsceneInteg += (-gv.cutsceneInteg + 120) / 32 * gv.deltaAdjust
+            gv.cutsceneInteg += (-gv.cutsceneInteg + 120) / 32 * gv.deltaAdjust;
         if gv.diaQueue[0][1] == "SHK":
-            fx_shake()
-            del gv.diaQueue[0]
+            fx_shake();
+            del gv.diaQueue[0];
         elif gv.diaQueue[0][1] == "DEST":
             if gv.diaQueue[0][2] == "Tele":
-                gv.tileHitTP = []
+                gv.tileHitTP = [];
             elif gv.diaQueue[0][2] == "Misc":
-                gv.tileHitObjs = []
-            del gv.diaQueue[0]
+                gv.tileHitObjs = [];
+            del gv.diaQueue[0];
         elif gv.diaQueue[0][1] == "TRINK":
             if len(gv.trinketCollected) >= 8:
-                gv.tileHitTP = []
-                gv.tileHitObjs = []
-            del gv.diaQueue[0]
+                gv.tileHitTP = [];
+                gv.tileHitObjs = [];
+            del gv.diaQueue[0];
         elif gv.diaQueue[0][1] == "MSC":
             if gv.diaQueue[0][2] == "None":
-                pygame.mixer.music.unload()
-                pygame.mixer.music.stop()
+                pygame.mixer.music.unload();
+                pygame.mixer.music.stop();
             else:
                 if gv.currSong != f"{mainDir}/SOUND/MUSIC/{gv.diaQueue[0][2]}":
-                    pygame.mixer.music.unload()
-                    pygame.mixer.music.load(f"{mainDir}/SOUND/MUSIC/{gv.diaQueue[0][2]}")
-                    pygame.mixer.music.play(-1)
-                    gv.currSong = f"{mainDir}/SOUND/MUSIC/{gv.diaQueue[0][2]}"
-                    gv.volTimer = 0
-                del gv.diaQueue[0]
+                    pygame.mixer.music.unload();
+                    pygame.mixer.music.load(f"{mainDir}/SOUND/MUSIC/{gv.diaQueue[0][2]}");
+                    pygame.mixer.music.play(-1);
+                    gv.currSong = f"{mainDir}/SOUND/MUSIC/{gv.diaQueue[0][2]}";
+                    gv.volTimer = 0;
+                del gv.diaQueue[0];
         elif gv.diaQueue[0][1] in ["P", "T"]:
             
-            colMap = {"T":pygame.Vector3(125, 125, 125), "P":pygame.Vector3(0, 255, 255)}
-            dia = regularFont.render(gv.diaQueue[0][2], False, colMap[gv.diaQueue[0][1]], colMap[gv.diaQueue[0][1]]//3)
+            colMap = {"T":pygame.Vector3(125, 125, 125), "P":pygame.Vector3(0, 255, 255)};
+            dia = regularFont.render(gv.diaQueue[0][2], False, colMap[gv.diaQueue[0][1]], colMap[gv.diaQueue[0][1]]//3);
             pygame.draw.rect(
                 screen,
                 colMap[gv.diaQueue[0][1]]//2,
@@ -757,7 +757,7 @@ def dialogRender():
                     dia.get_width()+10*2, 
                     dia.get_height()+10*2
                 )
-            )
+            );
             pygame.draw.rect(
                 screen,
                 colMap[gv.diaQueue[0][1]]//3,
@@ -767,13 +767,13 @@ def dialogRender():
                     dia.get_width()+5*2, 
                     dia.get_height()+5*2
                 )
-            )
+            );
             screen.blit(
                 dia,
                 (SCREEN_WIDTH//2-dia.get_width()//2 + gv.cutsceneOffset//3, (SCREEN_HEIGHT//2-dia.get_height()//2 + gv.diaVect2[1])//2)
-            )
+            );
     elif gv.cutsceneInteg >= -120:
-        gv.cutsceneInteg += (-gv.cutsceneInteg + -120) / 32 * gv.deltaAdjust
+        gv.cutsceneInteg += (-gv.cutsceneInteg + -120) / 32 * gv.deltaAdjust;
 def main_renderCode():
     """
     for i in playerTilelist:
@@ -788,7 +788,7 @@ def main_renderCode():
             False, # FlipY
         ),
         (nearestN(gv.playerX - 16, 2),nearestN(gv.playerY - 16, 2)),
-    )
+    );
     screen.blit(
         pygame.transform.flip(
             playerTilelist[gv.plSpriteNum], # Surface
@@ -796,7 +796,7 @@ def main_renderCode():
             False, # FlipY
         ),
         (nearestN(gv.playerX - 16, 2), nearestN(gv.playerY - 16, 2)),
-    )
+    );
     screen.blit(
         pygame.transform.flip(
             playerTilelist[gv.plSpriteNum], # Surface
@@ -804,97 +804,97 @@ def main_renderCode():
             False, # FlipY
         ),
         (nearestN(gv.playerX - 16, 2), nearestN(gv.playerY - 16, 2)),
-    )
+    );
     # print(playerX-16-(-SCREEN_WIDTH, SCREEN_WIDTH)[playerX > SCREEN_WIDTH//2],playerY-32-(-SCREEN_HEIGHT, SCREEN_HEIGHT)[playerY > SCREEN_HEIGHT//2],32,32)
     #pygame.draw.rect(screen,(255,255,0),player)
     if gv.diaQueue != []:
-        pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(0, 0, gv.cutsceneInteg + gv.cutsceneOffset, SCREEN_HEIGHT))
-        pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(SCREEN_WIDTH-gv.cutsceneInteg + gv.cutsceneOffset, 0, gv.cutsceneInteg - gv.cutsceneOffset, SCREEN_HEIGHT))
+        pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(0, 0, gv.cutsceneInteg + gv.cutsceneOffset, SCREEN_HEIGHT));
+        pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(SCREEN_WIDTH-gv.cutsceneInteg + gv.cutsceneOffset, 0, gv.cutsceneInteg - gv.cutsceneOffset, SCREEN_HEIGHT));
 
-    dialogRender()
+    dialogRender();
 def gui_debug_log():
     hhh = regularFont.render(f"Beta 0.11 / Demo | FPS: {str(1//gv.deltaTime)}", False, (255, 255, 255))
     screen.blit(
         hhh,
         (0, 0)
-    )
+    );
     osuser = f"Running on {platform.system()} {platform.release()}"
     screen.blit(
         regularFont.render(osuser, False, (255, 255, 255)),
         (0,20)
-    )
+    );
     res = f"{screenFlush.get_width()}, {screenFlush.get_height()}"
     screen.blit(
         regularFont.render(res, False, (255, 255, 255)),
         (0,40)
-    )
+    );
 def screenFx(opac = 255):
 
-    screenSizeAdj = min(screenFlush.get_width(), screenFlush.get_height())
-    screenSizeAdj2 = max(screenFlush.get_width(), screenFlush.get_height())
+    screenSizeAdj = min(screenFlush.get_width(), screenFlush.get_height());
+    screenSizeAdj2 = max(screenFlush.get_width(), screenFlush.get_height());
 
-    screenSizeDict = {screenSizeAdj:528, screenSizeAdj2:960}
+    screenSizeDict = {screenSizeAdj:528, screenSizeAdj2:960};
     
-    screenSizeAdjFactor = screenSizeAdj/screenSizeDict[screenSizeAdj]
-    screenSizeAdjFactor2 = screenSizeAdj2/screenSizeDict[screenSizeAdj2]
+    screenSizeAdjFactor = screenSizeAdj/screenSizeDict[screenSizeAdj];
+    screenSizeAdjFactor2 = screenSizeAdj2/screenSizeDict[screenSizeAdj2];
 
     if screenSizeAdjFactor <= screenSizeAdjFactor2:
-        screenSizeMax = (960*screenSizeAdjFactor,528*screenSizeAdjFactor)
+        screenSizeMax = (960*screenSizeAdjFactor,528*screenSizeAdjFactor);
     elif screenSizeAdjFactor2 <= screenSizeAdjFactor:
-        screenSizeMax = (960*screenSizeAdjFactor2,528*screenSizeAdjFactor2)
-    screenFit = pygame.transform.scale(screen, screenSizeMax)
-    screenFit.set_alpha(opac)
+        screenSizeMax = (960*screenSizeAdjFactor2,528*screenSizeAdjFactor2);
+    screenFit = pygame.transform.scale(screen, screenSizeMax);
+    screenFit.set_alpha(opac);
     #screenFit = screen
-    screenFlush.fill((0,0,0))
-    screenFlush.blit(screenFit,pygame.Rect(gv.shakeX+screenFlush.get_width()//2-screenFit.get_width()//2,gv.shakeY+screenFlush.get_height()//2-screenFit.get_height()//2,1,1))
+    screenFlush.fill((0,0,0));
+    screenFlush.blit(screenFit,pygame.Rect(gv.shakeX+screenFlush.get_width()//2-screenFit.get_width()//2,gv.shakeY+screenFlush.get_height()//2-screenFit.get_height()//2,1,1));
     if random.randint(0,1):
-        gv.shakeX, gv.shakeY = gv.shakeY * -0.9, gv.shakeX * -0.9
+        gv.shakeX, gv.shakeY = gv.shakeY * -0.9, gv.shakeX * -0.9;
     elif random.randint(0,1):
-        gv.shakeY = gv.shakeY * -0.9
+        gv.shakeY = gv.shakeY * -0.9;
     else:
-        gv.shakeX = gv.shakeX * -0.9
+        gv.shakeX = gv.shakeX * -0.9;
 
 def subTitleTut(text, xDiv, yDiv):
     screen.blit(
         textProp(text, regularFont)[0],
         (SCREEN_WIDTH//xDiv-textProp(text, regularFont)[1]//2, SCREEN_HEIGHT//yDiv-textProp(text, regularFont)[2]//2)
-    )
+    );
 def controlHelpScene(): #HIGHLY INEFFICIENT - FIX WHEN GETTING HOME FROM CHRISTMAS 2022
-    a = 3 # main timer
-    a2 = 0
-    b = 1 #walk
-    b2 = -25
-    b3 = -1
-    c = 20 #trinket
-    d = 18 #ceilingslide
-    e = -90
-    f = 0 #triple jump
-    f3 = []
-    g = 0 #wall jump
-    g3 = []
-    g5 = list("|Wall Jump|")
+    a = 3; # main timer
+    a2 = 0;
+    b = 1; #walk
+    b2 = -25;
+    b3 = -1;
+    c = 20; #trinket
+    d = 18; #ceilingslide
+    e = -90;
+    f = 0; #triple jump
+    f3 = [];
+    g = 0; #wall jump
+    g3 = [];
+    g5 = list("|Wall Jump|");
     g6 = "- - - - - - - - - - - - - - - - - - - - ^ Triple Jump ^ - - - - - - - - - - - - - - - - - - - -"
-    tripleJump = literal_eval(filesys.readFile(f"{mainDir}/tutData1"))
-    wallJump = literal_eval(filesys.readFile(f"{mainDir}/tutData"))
-    print(tripleJump)
-    gv.deltaTime = clock.tick(gv.FPS)/1000
+    tripleJump = literal_eval(filesys.readFile(f"{mainDir}/tutData1"));
+    wallJump = literal_eval(filesys.readFile(f"{mainDir}/tutData"));
+    print(tripleJump);
+    gv.deltaTime = clock.tick(gv.FPS)/1000;
     while a > 0 or a2 > 0:
-        gv.deltaTime = clock.tick(gv.FPS)/1000
-        gv.timer += gv.deltaTime
-        gv.deltaAdjust = gv.deltaTime*(gv.TarFPS/gv.FPS)*gv.FPS
+        gv.deltaTime = clock.tick(gv.FPS)/1000;
+        gv.timer += gv.deltaTime;
+        gv.deltaAdjust = gv.deltaTime*(gv.TarFPS/gv.FPS)*gv.FPS;
         for event in pygame.event.get():
             if event.type in [KEYDOWN, pygame.MOUSEBUTTONDOWN]:
-                a -= 1
+                a -= 1;
             elif event.type == QUIT:
-                gv.running = False
-                a = 0
-                a2 = 0
-        screen.fill((0, 0, 0))
-        gv.particles = particleSys.process(gv.particles, screen, 1, gv.deltaTime)
+                gv.running = False;
+                a = 0;
+                a2 = 0;
+        screen.fill((0, 0, 0));
+        gv.particles = particleSys.process(gv.particles, screen, 1, gv.deltaTime);
         if a == 3:
-            subTitleTut("- - - Movement - WAD - - -", 2, 3)
-            subTitleTut("- - - Interact with Signs - Enter - - -", 2, 2)
-            subTitleTut("- - - Hang on to ceiling - Hold W - - -", 2, 1.5)
+            subTitleTut("- - - Movement - WAD - - -", 2, 3);
+            subTitleTut("- - - Interact with Signs - Enter - - -", 2, 2);
+            subTitleTut("- - - Hang on to ceiling - Hold W - - -", 2, 1.5);
             screen.blit(
                 pygame.transform.flip(
                     playerTilelist[round(b)], # Surface
@@ -902,7 +902,7 @@ def controlHelpScene(): #HIGHLY INEFFICIENT - FIX WHEN GETTING HOME FROM CHRISTM
                     False, # FlipY
                 ),
                 (SCREEN_WIDTH//2-10-b2, SCREEN_HEIGHT//2.5-16)
-            )
+            );
             screen.blit(
                 pygame.transform.flip(
                     objectTilelist[round(c)], # Surface
@@ -910,7 +910,7 @@ def controlHelpScene(): #HIGHLY INEFFICIENT - FIX WHEN GETTING HOME FROM CHRISTM
                     False, # FlipY
                 ),
                 (SCREEN_WIDTH//2-10, SCREEN_HEIGHT//1.75-16)
-            )
+            );
             screen.blit(
                 pygame.transform.flip(
                     playerTilelist[round(d)], # Surface
@@ -918,44 +918,44 @@ def controlHelpScene(): #HIGHLY INEFFICIENT - FIX WHEN GETTING HOME FROM CHRISTM
                     False, # FlipY
                 ),
                 (SCREEN_WIDTH//2-10+round(math.sin(e*math.pi))*10, SCREEN_HEIGHT//1.3-16)
-            )
-            b += gv.deltaAdjust*0.1
+            );
+            b += gv.deltaAdjust*0.1;
             if b3 == -1:
-                b2 += gv.deltaAdjust
+                b2 += gv.deltaAdjust;
             else:
-                b2 -= gv.deltaAdjust
-            c += gv.deltaAdjust*0.1
-            d += gv.deltaAdjust*0.01
-            e += gv.deltaAdjust*0.01
+                b2 -= gv.deltaAdjust;
+            c += gv.deltaAdjust*0.1;
+            d += gv.deltaAdjust*0.01;
+            e += gv.deltaAdjust*0.01;
             if b > 6:
-                b = 1
-                b3 *= -1
+                b = 1;
+                b3 *= -1;
             if c > 35:
-                c = 20
+                c = 20;
             if d > 19:
-                d = 18
+                d = 18;
         if a == 2:
             for i in range(len(g5)):
                 screen.blit(
                     textProp(g5[i], regularFont)[0],
                     (SCREEN_WIDTH//2-textProp(g5[i], regularFont)[1]//2-240, SCREEN_HEIGHT//1.8-textProp(g5[i], regularFont)[2]//4+i*20-250)
-                )
-            subTitleTut(g6, 2, 1.1)
-            f += 0.5*gv.deltaAdjust
-            g += 0.5*gv.deltaAdjust
-            if round(f)+1 >= len(tripleJump): f = 0; f3 = []
-            if round(g)+1 >= len(wallJump): g = 0; g3 = []
-            f2 = round(f)
-            g2 = round(g)
+                );
+            subTitleTut(g6, 2, 1.1);
+            f += 0.5*gv.deltaAdjust;
+            g += 0.5*gv.deltaAdjust;
+            if round(f)+1 >= len(tripleJump): f = 0; f3 = [];
+            if round(g)+1 >= len(wallJump): g = 0; g3 = [];
+            f2 = round(f);
+            g2 = round(g);
             for f4 in f3:
                 if f4[1] <= 0:
-                    f3.remove(f4)
-                txtW = regularFont.render("W - Jump", False, (255, 255, 255))
-                txtW.set_alpha(f4[1])
+                    f3.remove(f4);
+                txtW = regularFont.render("W - Jump", False, (255, 255, 255));
+                txtW.set_alpha(f4[1]);
                 screen.blit(
                     txtW,
                     (f4[0][0]+math.cos(f4[1]*270/3)*2, f4[0][1]+f4[1]//3+math.sin(f4[1]*270/3)*2-255//3+100)
-                )
+                );
                 f4[1] -= 3
             for i in range(5):
                 try:
@@ -963,125 +963,125 @@ def controlHelpScene(): #HIGHLY INEFFICIENT - FIX WHEN GETTING HOME FROM CHRISTM
                             playerTilelist[tripleJump[f2-i*10][2]], # Surface
                             tripleJump[f2-i*10][3], # FlipX
                             False, # FlipY
-                        )
-                    if i != 0: playerEx.set_alpha(50)
+                        );
+                    if i != 0: playerEx.set_alpha(50);
                     screen.blit(
                         playerEx,
                         (tripleJump[f2-i*10][0], tripleJump[f2-i*10][1]+100)
-                    )
+                    );
                 except Exception:
                     pass
             if tripleJump[f2][4] != tripleJump[f2+1][4]:
-                print(tripleJump[f2][4], tripleJump[f2+1][4])
+                print(tripleJump[f2][4], tripleJump[f2+1][4]);
                 if (tripleJump[f2][4] != 0 and tripleJump[f2+1][4] != 3):
-                    f3.append([tripleJump[f2], 255])
-                musicsys.play(f"{mainDir}/SOUND/FX/jump2.wav", musicsys.sfxCh)
-                gv.particles += particleSys.generate(10, 16, 0.01, 0.02, a, a, -10, -50, 0.5, (0, 255//2, 255//2), (tripleJump[f2][0], tripleJump[f2][1]+100) )
+                    f3.append([tripleJump[f2], 255]);
+                musicsys.play(f"{mainDir}/SOUND/FX/jump2.wav", musicsys.sfxCh);
+                gv.particles += particleSys.generate(10, 16, 0.01, 0.02, a, a, -10, -50, 0.5, (0, 255//2, 255//2), (tripleJump[f2][0], tripleJump[f2][1]+100) );
             ###
             for g4 in g3:
                 if g4[1] <= 0:
-                    g3.remove(g4)
-                txtW = regularFont.render("W - Jump", False, (255, 255, 255))
-                txtW.set_alpha(g4[1])
+                    g3.remove(g4);
+                txtW = regularFont.render("W - Jump", False, (255, 255, 255));
+                txtW.set_alpha(g4[1]);
                 screen.blit(
                     txtW,
                     (g4[0][0]+math.cos(g4[1]*270/3)*2, g4[0][1]+g4[1]//3+math.sin(g4[1]*270/3)*2-255//3-170)
-                )
-                g4[1] -= 3
+                );
+                g4[1] -= 3;
             for i in range(5):
                 try:
                     playerEx = pygame.transform.flip(
                             playerTilelist[wallJump[g2-i*10][2]], # Surface
                             wallJump[g2-i*10][3], # FlipX
                             False, # FlipY
-                        )
-                    if i != 0: playerEx.set_alpha(50)
+                        );
+                    if i != 0: playerEx.set_alpha(50);
                     screen.blit(
                         playerEx,
                         (wallJump[g2-i*10][0], wallJump[g2-i*10][1]-170)
-                    )
+                    );
                 except Exception:
-                    pass
+                    pass;
             if wallJump[g2][4] != wallJump[g2+1][4]:
-                print(wallJump[g2][4], wallJump[g2+1][4])
+                print(wallJump[g2][4], wallJump[g2+1][4]);
                 if (wallJump[g2][4] != 0 and wallJump[g2+1][4] != 3):
-                    f3.append([wallJump[g2], 255])
-                musicsys.play(f"{mainDir}/SOUND/FX/jump2.wav", musicsys.sfxCh)
-                gv.particles += particleSys.generate(10, 16, 0.01, 0.02, a, a, -10, -50, 0.5, (0, 255//2, 255//2), (wallJump[g2][0], wallJump[g2][1]-170) )
-            subTitleTut("<- Lean towards a wall then press W", 1.8, 3)
+                    f3.append([wallJump[g2], 255]);
+                musicsys.play(f"{mainDir}/SOUND/FX/jump2.wav", musicsys.sfxCh);
+                gv.particles += particleSys.generate(10, 16, 0.01, 0.02, a, a, -10, -50, 0.5, (0, 255//2, 255//2), (wallJump[g2][0], wallJump[g2][1]-170) );
+            subTitleTut("<- Lean towards a wall then press W", 1.8, 3);
         if a <= 1:
-            subTitleTut("---------- Music ----------", 2, 4)
-            subTitleTut("OrangeLeaf36, TheMIDIMan", 2, 3.25)
-            subTitleTut("---------- Art ----------", 2, 2.65)
-            subTitleTut("Adenator, OrangeLeaf36", 2, 2.35)
-            subTitleTut("---------- Programming ----------", 2, 2)
-            subTitleTut("OrangeLeaf36", 2, 1.8)
-        subTitleTut("Click anywhere / Press any key", 2, 1.035)
+            subTitleTut("---------- Music ----------", 2, 4);
+            subTitleTut("OrangeLeaf36, TheMIDIMan", 2, 3.25);
+            subTitleTut("---------- Art ----------", 2, 2.65);
+            subTitleTut("Adenator, OrangeLeaf36", 2, 2.35);
+            subTitleTut("---------- Programming ----------", 2, 2);
+            subTitleTut("OrangeLeaf36", 2, 1.8);
+        subTitleTut("Click anywhere / Press any key", 2, 1.035);
         if a in [3,2]:
-            subTitleTut("- - - - [ Controls Help ] - - - -", 2, 10)
+            subTitleTut("- - - - [ Controls Help ] - - - -", 2, 10);
         else:
-            subTitleTut("- - - - [ Credits ] - - - -", 2, 10)
+            subTitleTut("- - - - [ Credits ] - - - -", 2, 10);
         if a <= 0:
-            a2 -= gv.deltaAdjust*1.5
+            a2 -= gv.deltaAdjust*1.5;
         elif a2 < 250:
-            a2 += gv.deltaAdjust*1.5
-        screenFx(a2)
-        pygame.display.update()
+            a2 += gv.deltaAdjust*1.5;
+        screenFx(a2);
+        pygame.display.update();
 def recorder():
-    global rec, recEnabled
+    global rec, recEnabled;
     if recEnabled:
-        rec.append([gv.playerX, gv.playerY, gv.plSpriteNum, gv.plAnimFlip, gv.playerJumpCounter])
+        rec.append([gv.playerX, gv.playerY, gv.plSpriteNum, gv.plAnimFlip, gv.playerJumpCounter]);
 
 # Main Function
 async def mainScene():  # sourcery skip: extract-method
     """
         Main Game Code
     """
-    gv.deltaTime = clock.tick(gv.FPS)/1000
-    gv.timer = 0
+    gv.deltaTime = clock.tick(gv.FPS)/1000;
+    gv.timer = 0;
     while gv.running:
-        gv.deltaTime = clock.tick(gv.FPS)/1000
-        gv.timer += gv.deltaTime
-        gv.volTimer += gv.deltaTime
-        gv.runtimeFPS = 1/gv.deltaTime
-        gv.deltaAdjust = gv.deltaTime*(gv.TarFPS/gv.FPS)*gv.FPS
-        screen.fill((0,0,10))
+        gv.deltaTime = clock.tick(gv.FPS)/1000;
+        gv.timer += gv.deltaTime;
+        gv.volTimer += gv.deltaTime;
+        gv.runtimeFPS = 1/gv.deltaTime;
+        gv.deltaAdjust = gv.deltaTime*(gv.TarFPS/gv.FPS)*gv.FPS;
+        screen.fill((0,0,10));
         ##### ----- KEYCHECK ----- #####
-        main_inputCheck()
+        main_inputCheck();
         ##### ----- RECORDER ----- #####
-        recorder()
+        recorder();
         ##### ----- PLAYER CODE ----- #####
         # Makes sure the deltatime gets settled before allowing player to move
         #print(round(gv.playerXVel*100)/100, round(gv.playerYVel*100)/100, gv.plWorldX, gv.plWorldX2, gv.plWorldY, gv.plWorldY2)
-        if gv.timer > 0.5: playerMovement()
+        if gv.timer > 0.5: playerMovement();
         
         ##### ----- PRERENDER ----- #####
         ##### ----- ROOM/MAP CODE ----- #####
         
-        pygame.mixer.music.set_volume(gv.volTimer)
+        pygame.mixer.music.set_volume(gv.volTimer);
         ##### ----- DISPLAY ----- #####
-        main_renderCode()
+        main_renderCode();
         
         ###
-        gui_debug_log()
-        drawRoomConfig("levelTitle")
-        screenFx(gv.timer*65)
-        pygame.display.update()
+        gui_debug_log();
+        drawRoomConfig("levelTitle");
+        screenFx(gv.timer*65);
+        pygame.display.update();
 
 
 
 # Main loop
-#musicsys.play(f"{mainDir}/SOUND/MUSIC/24C - C4 For Lunch.mp3")
-gv.map = levelsys.readTmx(f"{mainDir}/WORLDS/mainWorld/24cM_x{gv.plWorldX}_y{gv.plWorldY}.tmx")
-reloadMap(True)
-#mainScene()
-musicsys.play(f"{mainDir}/SOUND/MUSIC/orangeleafdev_opening.mp3")
-gv.running = intro.main(screenFlush,mainDir)
-controlHelpScene()
-musicsys.defaultCh.stop()
-cProfile.run('asyncio.run(mainScene())')
-pygame.display.quit()
-pygame.quit()
-sys.exit()
-quit()
-exit()
+#musicsys.play(f"{mainDir}/SOUND/MUSIC/24C - C4 For Lunch.mp3");
+gv.map = levelsys.readTmx(f"{mainDir}/WORLDS/mainWorld/24cM_x{gv.plWorldX}_y{gv.plWorldY}.tmx");
+reloadMap(True);
+#mainScene();
+musicsys.play(f"{mainDir}/SOUND/MUSIC/orangeleafdev_opening.mp3");
+gv.running = intro.main(screenFlush,mainDir);
+controlHelpScene();
+musicsys.defaultCh.stop();
+cProfile.run('asyncio.run(mainScene())');
+pygame.display.quit();
+pygame.quit();
+sys.exit();
+quit();
+exit();
