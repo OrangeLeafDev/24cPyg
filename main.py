@@ -411,7 +411,7 @@ def tileYCollisionCheck(tileList):  # sourcery skip: low-code-quality
     player.x += 1;
     player.y += 1;
 
-    colTiles = getColHits(tileList)
+    colTiles = getColHits(tileList);
     for tempTile in colTiles:
         if gv.playerYVel > 0:
             player.top = tempTile.bottom;
@@ -664,7 +664,7 @@ def reloadMap(forceObjRegen):
     gv.levelLoop = drawRoomConfig("levelLoop");
 
 def main_inputCheck():  # sourcery skip: low-code-quality
-    global rec, recEnabled
+    global rec, recEnabled;
     for event in pygame.event.get():
         if event.type == pygame.VIDEORESIZE:
             screenFlush = pygame.display.set_mode((pygame.display.get_surface().get_size()), pygame.RESIZABLE, vsync=1);
