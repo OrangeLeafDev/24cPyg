@@ -6,7 +6,7 @@ This is the third revision of 24Bit/24Colors/re_col/ISD.
 ## Requirements
 ### Source
 * Python 3.11
-* Pygame 2.1.3.dev8
+* Pygame-CE 2.5.3
 ### Windows
 * Windows 10*
 * 4 or 8 gb of ram
